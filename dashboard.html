@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee shop dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="brand">
+                <img src="https://png.pngtree.com/png-vector/20220204/ourlarge/pngtree-coffee-and-cafe-brand-logo-design-using-a-glass-cup-concept-png-image_4378003.png" alt="img">
+                <h2>MyBrand</h2>
+
+            </div>
+            <a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#customers"><i class="fas fa-users"></i> Customers</a>
+            <a href="#messages"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="#help"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="#feedback"><i class="fas fa-comments"></i> Feedback</a>
+            <a href="#contact"><i class="fa-solid fa-phone"></i>Contact</a>
+
+            <!-- profile section -->
+            <div class="user-profile">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+                <span class="username">Sasha Velasquez</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- top bar -->
+            <div class="topbar">
+                <!-- search bar -->
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                 <!-- top bar icons -->
+                <div class="topbar-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-lock"></i>
+                </div>
+            </div>
+
+            <!-- content -->
+            <div class="content">
+                <h1>Coffee Shop Dashboard !</h1>
+                <div class="dashboard-boxes">
+                    <!-- row with 4 small boxes -->
+                    <div class="top-dashboard-boxes">
+
+                        <div class="box small-box box-1">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <div class="data">
+                                <h3>Earning </h3>
+                                <h2>139$</h2>
+                            </div>
+                            
+                        </div>
+                        <div class="box small-box box-2">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <div class="data">
+                                <h3>Sales </h3>
+                                <h2>125$</h2>
+                            </div>
+                            
+                        </div>
+                        <div class="box small-box box-3">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <div class="data">
+                                <h3>Likes  </h3>
+                                <h2>10.7K</h2>
+                            </div>
+                            
+                        </div>
+                        <div class="box small-box box-4">
+                            <i class="fa-solid fa-comment"></i>
+                            <div class="data">
+                                <h3>Comments  </h3>
+                                <h2>60.76k</h2>
+                            </div>   
+                        </div>
+
+                    </div>
+                    
+    
+                    <!-- yow with 8 large boxes -->
+                    <div class="graph-dashboard-boxes">
+                        <div class="box large-box box-6">
+                            <canvas id="myChart1"  ></canvas>
+                        </div>
+                        <div class="box large-box box-6">
+                            <canvas id="myChart2"  ></canvas>
+                        </div>
+                        <div class="box large-box box-7">
+                            <canvas id="myChart3"  ></canvas>
+                        </div>
+                        <div class="box large-box box-8">
+                            <canvas id="myChart4"  ></canvas>
+                        </div>
+                        <div class="box large-box box-9">
+                            <canvas id="myChart5"  ></canvas>
+                        </div>
+                        <div class="box large-box box-10">
+                            <canvas id="myChart6"  ></canvas>
+                        </div>
+                        <div class="box large-box box-11">
+                            <canvas id="myChart7"  ></canvas>
+                        </div>
+                        <div class="box large-box box-12">
+                            <canvas id="myChart8"  ></canvas>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+    
+</body>
+</html>
